@@ -3,7 +3,10 @@
 A pixel-perfect, feature-rich landing page showcasing modern web development excellence with React, Tailwind CSS, and Framer Motion.
 
 ## Live Demo
-[Add Vercel/Netlify Link Here]
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://Pandeyashwin26.github.io/techzephyr-2025-replicate-innovate_1/)
+[![Deploy to GitHub Pages](https://github.com/Pandeyashwin26/techzephyr-2025-replicate-innovate_1/actions/workflows/pages.yml/badge.svg)](https://github.com/Pandeyashwin26/techzephyr-2025-replicate-innovate_1/actions/workflows/pages.yml)
+
+https://Pandeyashwin26.github.io/techzephyr-2025-replicate-innovate_1/
 
 ## Features Implemented
 
