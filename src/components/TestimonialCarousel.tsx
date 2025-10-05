@@ -1,9 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
 
-const TESTIMONIALS = [
-  { quote: 'This landing page is blazing fast and delightful.', author: 'Alex J.' },
-  { quote: 'Animations feel smooth and never get in the way.', author: 'Priya S.' },
-  { quote: 'A great example of modern frontend craftsmanship.', author: 'Liam K.' },
+const TESTIMONIALS: Array<{
+  quote: string
+  author: string
+  role?: string
+  url?: string
+}> = [
+  {
+    quote: 'Founder of AshwinTech Solutions',
+    author: 'Ashwin',
+    role: 'Founder, AshwinTech Solutions',
+    url: 'https://ashwintechsolutions.site/'
+  },
+  {
+    quote: 'Founder of Inos Solution',
+    author: 'Harshit Raj',
+    role: 'Founder, Inos Solution'
+  }
 ]
 
 export default function TestimonialCarousel() {
@@ -28,8 +41,15 @@ export default function TestimonialCarousel() {
         <div className="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8 min-h-[160px]">
           {TESTIMONIALS.map((t, i) => (
             <div key={t.author} className={`transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0 absolute inset-8'}`}>
-              <p className="text-lg">“{t.quote}”</p>
-              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">— {t.author}</p>
+              <p className="text-lg">{t.quote}</p>
+              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                — {t.url ? (
+                  <a href={t.url} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">{t.author}</a>
+                ) : (
+                  t.author
+                )}
+                {t.role ? ` · ${t.role}` : ''}
+              </p>
             </div>
           ))}
         </div>
